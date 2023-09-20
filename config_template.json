@@ -1,0 +1,32 @@
+{
+  "n_atoms": 54,
+  "batch_size": 5,
+  "emin_emax": [-1.0, 1.0],
+  "n_kpoints": 40,
+  "k_downsampling": 2,
+  "start_basis_set_name": "start_basis_set.pickle",
+
+  "dataset": {
+    "concentrations": ["0", "10", "30", "40", "60", "80", "100"],
+    "train_structures_per_concentration": [1, 2, 2, 2, 2, 2, 1],
+    "loss_weights": [2.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0]
+  },
+
+  "model": {
+    "layer_nodes": [15, 10, 7],
+    "correction_type": "onsite_subshell"
+  },
+
+  "training": {
+    "epochs": 1000,
+    "checkpoint_epochs": 50,
+    "resume_training": false,
+    "resume_epoch": -111
+  },
+
+  "validation": {
+    "epoch_min": 1000,
+    "epoch_max": 1000,
+    "epoch_step": 50
+  }
+}

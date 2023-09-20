@@ -1,0 +1,11 @@
+.idea/
+*.png
+*.pickle
+!start_basis_set.pickle
+*.log
+__pycache__/
+*.licconf
+venv/
+temp/
+config.json
+DSgen_options.json

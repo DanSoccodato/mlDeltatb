@@ -1,0 +1,9 @@
+{
+  "cation": "ga",
+  "a_antimonide": 6.0959,
+  "a_arsenide": 5.6535,
+  "alpha_antimonide": 0.39,
+  "alpha_arsenide": 0.33,
+  "n_ens": 10,
+  "relax": true
+}
