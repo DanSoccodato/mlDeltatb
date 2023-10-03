@@ -31,9 +31,19 @@ def main(dataset_path, input_path, output_path):
     configuration = y_train[0][0]._configuration()
     a = configuration.bravaisLattice().a() / 3.
 
-    d_n1 = numpy.sqrt(3.0) / 4.0 * a
-    d_n2 = numpy.sqrt(2.0) / 2.0 * a
-    r_cut = (d_n1 + d_n2) / 2.
+    # 1st neighbour r_cut
+    # Use one structure in raw dataset to compute r_cut and initialize the descriptor
+    # y_train = raw_dataset[1]
+    # configuration = y_train[0][0]._configuration()
+    # a = configuration.bravaisLattice().a() / 3.
+    #
+    # d_n1 = numpy.sqrt(3.0) / 4.0 * a
+    # d_n2 = numpy.sqrt(2.0) / 2.0 * a
+    # r_cut = (d_n1 + d_n2) / 2.
+
+    # Hard-coded, 3rd neighbour r_cut (used in the paper)
+    r_cut = 4.6 * Angstrom
+
     n_basis = 20
 
     descriptor = MTPDescriptor(r_cut, n_basis)

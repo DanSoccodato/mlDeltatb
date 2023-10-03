@@ -46,7 +46,8 @@ class MLCorrection:
 
 class OnsiteSubshellCorrection(MLCorrection):
     """
-    Correction on the s, p, d, s* orbitals. The output of the network has dimension 4.
+    Correction on the s, p, d, s* orbitals, shell resolved. The output of the network has dimension 4.
+    This is the type of correction defined in the paper.
     """
 
     def __init__(self, configurations, basis_set_patch):
@@ -149,6 +150,10 @@ class OnsiteSubshellCorrection(MLCorrection):
 
 
 class OnsiteOrbitalCorrection(MLCorrection):
+    """
+       Experimental correction on the s, p, d, s* orbitals, orbital resolved.
+       The output of the network has dimension 10.
+    """
 
     def __init__(self, configurations, basis_set_patch):
         super(OnsiteOrbitalCorrection, self).__init__(configurations, basis_set_patch)

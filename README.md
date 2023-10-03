@@ -118,7 +118,7 @@ The options to choose are:
         "layer_nodes": list containing the number of nodes for each layer of the neural network to train, it defines 
         the network architecture  
         "correction_type": the type of correction to implement, possible choices: ["onsite_subshell" (4 output nodes), 
-        "onsite_orbital" (10 output nodes)]  
+        "onsite_orbital" (10 output nodes)]. "onsite_subshell" is the type of correction defined in the article.   
           }
         
         "training": {  
