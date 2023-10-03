@@ -4,9 +4,9 @@ import numpy
 
 from QuantumATK import *
 
-from mltb.TightBindingFitting.EmpiricalSlaterKosterUtilities import parameterDictionaryToHamiltonianParametrization
-from mltb.TightBindingFitting.Fitter import ReferenceBandstructureFromMemory, FreeParameter, BoundParameter, TargetParameters
-from mltb.TightBindingFitting.Fitter import SemiEmpiricalFitter
+from mlDeltatb.TightBindingFitting.EmpiricalSlaterKosterUtilities import parameterDictionaryToHamiltonianParametrization
+from mlDeltatb.TightBindingFitting.Fitter import ReferenceBandstructureFromMemory, FreeParameter, BoundParameter, TargetParameters
+from mlDeltatb.TightBindingFitting.Fitter import SemiEmpiricalFitter
 
 from NL.ComputerScienceUtilities.Exceptions import NLValueError
 from NL.Calculators.SemiEmpirical.SemiEmpiricalCalculator import SemiEmpiricalCalculator
@@ -691,7 +691,7 @@ def main(compounds, input_path, output_path="."):
             optimizer_kwargs={'max_nfev': 200, 'xtol': 1e-4})
 
     else:
-        raise NLValueError("\nInvalid argument. Possible arguments are:\n- gaas\n- gasb\n- gaas_gasb\n- alas_alsb")
+        raise ValueError("\nInvalid argument. Possible arguments are:\n- gaas\n- gasb\n- gaas_gasb\n- alas_alsb")
 
 
 if __name__ == '__main__':

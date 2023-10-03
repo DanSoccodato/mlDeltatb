@@ -5,7 +5,7 @@ from QuantumATK import SemiEmpiricalCalculator
 from QuantumATK import SlaterKosterHamiltonianParametrization
 from QuantumATK import SpinOrbit
 
-from mltb.Common.ETBStartingPoint import basisSetFromFile
+from mlDeltatb.Common.ETBStartingPoint import basisSetFromFile
 
 
 def attachCalculator(configuration, basis_set_path):

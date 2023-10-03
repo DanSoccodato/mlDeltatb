@@ -1,5 +1,5 @@
 import tensorflow as tf
-import numpy
+# import numpy
 import sys
 import os
 import pickle
@@ -7,11 +7,13 @@ import json
 import time
 import datetime
 
-from mltb.Common.Model import TBNN
-from mltb.Common.DatasetProcessing import importDataset, processDataset
-from mltb.Descriptors.Descriptor import MTPDescriptor
-from mltb.BackpropOptimization.Loss import bandstructureLoss
-from mltb.BackpropOptimization.Corrections import OnsiteSubshellCorrection, OnsiteOrbitalCorrection
+from QuantumATK import Angstrom
+
+from mlDeltatb.Common.Model import TBNN
+from mlDeltatb.Common.DatasetProcessing import importDataset, processDataset
+from mlDeltatb.Descriptors.Descriptor import MTPDescriptor
+from mlDeltatb.BackpropOptimization.Loss import bandstructureLoss
+from mlDeltatb.BackpropOptimization.Corrections import OnsiteSubshellCorrection, OnsiteOrbitalCorrection
 
 NUM_THREADS = 16
 print(f"\nSetting threading variables to {NUM_THREADS}.")
@@ -55,13 +57,18 @@ def main(dataset_path=".", input_path=".", output_path="."):
     raw_dataset, rng = importDataset(dataset_path, infos)
 
     # Use one structure in raw dataset to compute r_cut and initialize the descriptor
-    y_train = raw_dataset[1]
-    configuration = y_train[0][0]._configuration()
-    a = configuration.bravaisLattice().a() / 3.
+    # 1st neighbour r_cut
+    # y_train = raw_dataset[1]
+    # configuration = y_train[0][0]._configuration()
+    # a = configuration.bravaisLattice().a() / 3.
+    #
+    # d_n1 = numpy.sqrt(3.0) / 4.0 * a
+    # d_n2 = numpy.sqrt(2.0) / 2.0 * a
+    # r_cut = (d_n1 + d_n2) / 2.
 
-    d_n1 = numpy.sqrt(3.0) / 4.0 * a
-    d_n2 = numpy.sqrt(2.0) / 2.0 * a
-    r_cut = (d_n1 + d_n2) / 2.
+    # Hard-coded, 3rd neighbour r_cut (used in the paper)
+    r_cut = 4.6 * Angstrom
+
     n_basis = 20
 
     results_folder = infos['results_folder']

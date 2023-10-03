@@ -7,11 +7,11 @@ import sys
 
 from NL.CommonConcepts import PhysicalQuantity as Units
 
-from mltb.Descriptors.Descriptor import MTPDescriptor
-from mltb.Common.Model import TBNN
-from mltb.Common.DatasetProcessing import importDataset, processDataset, normalizeDataset
-from mltb.BackpropOptimization.BandsOps import computeBandstructure, alignBands, shiftAndCropBands, getBandsAttributes
-from mltb.BackpropOptimization.Corrections import OnsiteSubshellCorrection, OnsiteOrbitalCorrection
+from mlDeltatb.Descriptors.Descriptor import MTPDescriptor
+from mlDeltatb.Common.Model import TBNN
+from mlDeltatb.Common.DatasetProcessing import importDataset, processDataset, normalizeDataset
+from mlDeltatb.BackpropOptimization.BandsOps import computeBandstructure, alignBands, shiftAndCropBands, getBandsAttributes
+from mlDeltatb.BackpropOptimization.Corrections import OnsiteSubshellCorrection, OnsiteOrbitalCorrection
 
 
 def loadGlobalVariables(input_path, output_path):
@@ -134,7 +134,7 @@ def evaluateAndPlot(corrections, target_bandstructure, n_atoms, n_kpoints, k_dow
     plt.plot(reference[:, :-1], 'b-')
     plt.plot(ml_bands[:, :-1], 'r--')
     plt.plot(reference[:, -1], 'b-', label='DFT')
-    plt.plot(ml_bands[:, -1], 'r--', label='MLTB')
+    plt.plot(ml_bands[:, -1], 'r--', label='ML$\Delta$TB')
     plt.ylabel("Energy [eV]")
     plt.title('Bandstructure fit')
     plt.legend()
@@ -169,11 +169,11 @@ def evaluateSet(epoch, model, x_set, y_set, infos, test_set=True, zero_correctio
 
         if test_set:
             img_filename = f"/eval_{i}"
-            band_filename = f"/bandstructures/test_bandstructure_{i}_mltb.pickle"
+            band_filename = f"/bandstructures/test_bandstructure_{i}_mlDeltatb.pickle"
             dft_filename = f"/bandstructures/test_bandstructure_{i}_dft.pickle"
         else:
             img_filename = f"/fit_after_{epoch}_epochs_{i}"
-            band_filename = f"/bandstructures/train_bandstructure_{i}_mltb.pickle"
+            band_filename = f"/bandstructures/train_bandstructure_{i}_mlDeltatb.pickle"
             dft_filename = f"/bandstructures/train_bandstructure_{i}_dft.pickle"
 
         target_bands = y[0]
