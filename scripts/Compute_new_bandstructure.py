@@ -3,9 +3,9 @@ import tensorflow as tf
 import pickle
 import numpy
 
-from mltb.Common.Model import TBNN
-from mltb.Descriptors.Descriptor import MTPDescriptor
-from mltb.Common.ATKCorrection import correctedSemiEmpiricalCalculator
+from mlDeltatb.Common.Model import TBNN
+from mlDeltatb.Descriptors.Descriptor import MTPDescriptor
+from mlDeltatb.Common.ATKCorrection import correctedSemiEmpiricalCalculator
 
 
 from QuantumATK import *
@@ -74,7 +74,7 @@ def main(input_path, configuration_name, saved_weights_epoch, fermi_level_guess)
         )
     )
     # Save bandstructure
-    nlsave(input_path + "/MLTB-prediction-" + configuration_name, bandstructure)
+    nlsave(input_path + "/MLDeltaTB-prediction-" + configuration_name, bandstructure)
 
 
 if __name__ == "__main__":

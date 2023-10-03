@@ -1,7 +1,7 @@
 from QuantumATK import *
 import pickle
 
-from mltb.TightBindingFitting.EmpiricalSlaterKosterUtilities import parameterDictionaryToSKTable
+from mlDeltatb.TightBindingFitting.EmpiricalSlaterKosterUtilities import parameterDictionaryToSKTable
 
 
 def basisSetFromFile(basis_set_path):

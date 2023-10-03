@@ -4,9 +4,9 @@ import numpy
 
 from QuantumATK import *
 
-from mltb.TightBindingFitting.EmpiricalSlaterKosterUtilities import parameterDictionaryToHamiltonianParametrization
-from mltb.TightBindingFitting.Fitter import ReferenceBandstructureFromMemory, FreeParameter, BoundParameter, TargetParameters
-from mltb.TightBindingFitting.Fitter import SemiEmpiricalFitter
+from mlDeltatb.TightBindingFitting.EmpiricalSlaterKosterUtilities import parameterDictionaryToHamiltonianParametrization
+from mlDeltatb.TightBindingFitting.Fitter import ReferenceBandstructureFromMemory, FreeParameter, BoundParameter, TargetParameters
+from mlDeltatb.TightBindingFitting.Fitter import SemiEmpiricalFitter
 
 from NL.ComputerScienceUtilities.Exceptions import NLValueError
 from NL.Calculators.SemiEmpirical.SemiEmpiricalCalculator import SemiEmpiricalCalculator

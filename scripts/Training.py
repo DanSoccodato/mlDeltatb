@@ -9,11 +9,11 @@ import datetime
 
 from QuantumATK import Angstrom
 
-from mltb.Common.Model import TBNN
-from mltb.Common.DatasetProcessing import importDataset, processDataset
-from mltb.Descriptors.Descriptor import MTPDescriptor
-from mltb.BackpropOptimization.Loss import bandstructureLoss
-from mltb.BackpropOptimization.Corrections import OnsiteSubshellCorrection, OnsiteOrbitalCorrection
+from mlDeltatb.Common.Model import TBNN
+from mlDeltatb.Common.DatasetProcessing import importDataset, processDataset
+from mlDeltatb.Descriptors.Descriptor import MTPDescriptor
+from mlDeltatb.BackpropOptimization.Loss import bandstructureLoss
+from mlDeltatb.BackpropOptimization.Corrections import OnsiteSubshellCorrection, OnsiteOrbitalCorrection
 
 NUM_THREADS = 16
 print(f"\nSetting threading variables to {NUM_THREADS}.")

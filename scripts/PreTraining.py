@@ -4,9 +4,9 @@ import numpy
 import pickle
 import json
 
-from mltb.Common.Model import TBNN
-from mltb.Common.DatasetProcessing import importDataset, processDataset
-from mltb.Descriptors.Descriptor import MTPDescriptor
+from mlDeltatb.Common.Model import TBNN
+from mlDeltatb.Common.DatasetProcessing import importDataset, processDataset
+from mlDeltatb.Descriptors.Descriptor import MTPDescriptor
 
 
 def loadGlobalVariables(input_path, output_path):

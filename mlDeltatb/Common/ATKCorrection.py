@@ -16,7 +16,7 @@ from QuantumATK import SpinOrbit
 from NL.Calculators.SemiEmpirical.Builders.AbstractSemiEmpiricalBuilder import loadAndCheckBasis
 from NL.ComputerScienceUtilities.Functions import numpyToRealVector
 
-from mltb.Common.ETBStartingPoint import basisSetFromFile
+from mlDeltatb.Common.ETBStartingPoint import basisSetFromFile
 
 
 def correctedSemiEmpiricalCalculator(orbital_corrections, basis_set_path, correction=True):

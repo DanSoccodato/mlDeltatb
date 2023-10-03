@@ -2,8 +2,8 @@ import sys
 
 from QuantumATK import *
 import numpy
-from mltb.BackpropOptimization.ATKUtils import attachCalculator
-from mltb.Common.DatasetProcessing import readBandstructureFiles
+from mlDeltatb.BackpropOptimization.ATKUtils import attachCalculator
+from mlDeltatb.Common.DatasetProcessing import readBandstructureFiles
 
 
 def main(dataset_path, input_path, output_path):
