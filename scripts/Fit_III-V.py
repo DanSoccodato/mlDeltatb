@@ -691,7 +691,7 @@ def main(compounds, input_path, output_path="."):
             optimizer_kwargs={'max_nfev': 200, 'xtol': 1e-4})
 
     else:
-        raise NLValueError("\nInvalid argument. Possible arguments are:\n- gaas\n- gasb\n- gaas_gasb\n- alas_alsb")
+        raise ValueError("\nInvalid argument. Possible arguments are:\n- gaas\n- gasb\n- gaas_gasb\n- alas_alsb")
 
 
 if __name__ == '__main__':

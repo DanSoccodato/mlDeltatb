@@ -127,7 +127,7 @@ The options to choose are:
         "checkpoint_epochs": the number of epochs that pass before saving the partial results  
         "resume_training": if set to `true`, training will resume on the epoch set in "resume_epoch". The file 
         `saved_weights_{resume_epoch}.pickle`, containing the weights of the neural network saved during a previous checkpoint, 
-        needs to be in the main folder.   
+        needs to be in the input folder.
         "resume_epoch": the epoch on which to resume training, does not have any effect if "resume_training" is set 
         to `false`  
           }

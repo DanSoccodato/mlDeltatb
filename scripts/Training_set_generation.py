@@ -81,7 +81,7 @@ def createConstituents(lattice_constant, cation):
             fractional_coordinates=fractional_coordinates
         )
     else:
-        raise NLValueError("\nInvalid option for cation choice. Possible arguments are:\n- al\n- ga\n- in")
+        raise ValueError("\nInvalid option for cation choice. Possible arguments are:\n- al\n- ga\n- in")
 
     return arsenide, antimonide
 
