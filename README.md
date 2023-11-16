@@ -39,7 +39,10 @@ On Windows, just use the python executable present in the Scripts folder of the 
 - `MY_VENV_DIR/Scripts/python.exe {scripts}`, where `scripts` is any of the scripts described in the next sections
 
 ## Preliminary scripts
-These scripts need to be executed before the training procedure can start.   
+These scripts need to be executed before the training procedure can start. 
+
+**Important**: This section is needed in order to generate from scratch the dataset and initial ETB parametrization used in the article.
+In order to just reproduce the article results, you can skip this part, and use the unzipped `dataset.zip` folder as the `dataset_path` keyword required in the "Pre-training, Training and Validation scripts" section. Moreover, whenever it is required to use the `start_basis_set.pickle` file, you can find the already generated file in `scripts/fitting_results`. 
 
 ***Note***: *Remember to use the python executable of the virtual environment, following the steps of the previous section.*   
 
@@ -93,7 +96,7 @@ and `compounds` is a string indicating which materials to fit. Possible choices 
 ## Pre-training, Training and Validation scripts
 ***Note***: *Remember to use the python executable of the virtual environment, following the steps of the "Setup" section.*  
 
-After having generated the DFT dataset and the starting ETB parametrization, the training procedure can start.
+After having generated the DFT dataset and the starting ETB parametrization (you can also use the already generated ones, see the "Important" note in the previous section), the training procedure can start.
 In order to train and validate the model, a series of options must be chosen after renaming the `config_template.json` 
 file to `config.json`.   
 The options to choose are:   
