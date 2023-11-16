@@ -19,9 +19,11 @@ def bandstructureLoss(network_output, correction_model, target_objects, n_kpoint
         the proper way of adding it to the Hamiltonian.
     :type correction_model:  MLCorrection
 
-    :param target_bands:
-        The target band structure objects used for comparing the result of the ML correction. The shape is (batch_size,)
-    :type target_bands: list of Bandstructure
+    :param target_objects:
+        In the first entry, the target band structure objects used for comparing the result of the ML correction. 
+        In the second entry, the weight to associate to that target.
+        The shape is (batch_size, 2)
+    :type target_objects: list of [Bandstructure, float]
 
     :param n_kpoints:
         The number of kpoints to consider when fitting the band structures. The range considered will be [0, n_kpoints]
