@@ -1,6 +1,6 @@
 # ML&Delta;TB
 Machine Learning - &Delta; - Tight Binding (ML&Delta;TB) is a package that performs an environment-dependent learning of the corrections 
-on the Slater integrals, in the context of the Empirical Tight Binding method.
+on the Slater integrals, in the context of the Empirical Tight Binding method. Please cite [this article](https://iopscience.iop.org/article/10.1088/2632-2153/ad4510) if you plan on using the code or the data in the repository.
 
 ## Setup
 There are different scripts that can/must be used in the ML&Delta;TB framework. In order to use the scripts, the `mlDeltatb` package needs
